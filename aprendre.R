@@ -35,3 +35,36 @@ diplome[c(2,3,4)] # donne une liste avec la valeur 2, 3 et 4
 diplome[-2] # retire la 2eme valeur
 
 #############################################
+
+numeric_vec <- c(10,55,49,4)
+class(numeric_vec) # renvoi "numeric"
+
+character_vec <- c("Jaune", "Vert", "Bleu", "Rouge")
+class(character_vec) # renvoi "character"
+
+logical_vec <- c(TRUE,FALSE,FALSE,TRUE)
+class(logical_vec) # renvoi "logical"
+
+un_vecteur <- c("Luca", 30, 2000, FALSE)
+class(un_vecteur) # garde que la premier donc "numeric"
+
+is.numeric(1) #verifi si c'est un numeric
+ 
+is.character("a") #verifi si c'est un character
+
+is.logical(TRUE) # verifi que c'est un logical
+
+as.character(1) # transforme en character "1"
+
+as.numeric(logical_vec) # transforme en numerique 1 TRUE 0 FALS
+
+#############################################
+
+diplome <- c("CAP", "Bac", "Bac+2", "CAP", "Bac+3")
+class(diplome)
+diplome <- as.factor(diplome)
+diplome
+class(diplome) # c'est un "factor" c'est du texte stocké en numérique
+
+###########################################
+
