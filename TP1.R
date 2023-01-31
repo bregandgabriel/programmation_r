@@ -51,21 +51,28 @@ brutToNet3<- function(brut,statu,temp=100,taux=7.5){
   }
 }
 
+#netAnnuelToImpot<-function(salaire){
+#  if (salaire>10777){
+#    if (salaire>27478){
+#      if (salaire>78570){
+#        if (salaire>168994){
+#          return(77244.26 + (salaire - 168994) * 0.45)
+#        }
+#        else{return(21969.8 + (salaire - 78570) * 0.41)}
+#      }
+#      else {return(3025.56 + (salaire - 27478) * 0.3)}
+#    }
+#    else {return((salaire - 10777) * 0.11)}
+#  }
+#  else{return(0)}
+#}
+
 netAnnuelToImpot<-function(salaire){
-  if (salaire>10777){
-    if (salaire>27478){
-      if (salaire>78570){
-        if (salaire>168994){
-          return(77244.26 + (salaire - 168994) * 0.45)
-        }
-        else{return(21969.8 + (salaire - 78570) * 0.41)}
-      }
-      else {return(3025.56 + (salaire - 27478) * 0.3)}
-    }
-    else {return((salaire - 10777) * 0.11)}
-  }
-  else{return(0)}
-}
+  if (salaire<10777){return(0)}
+  if (salaire<27478){return((salaire - 10777) * 0.11)}
+  if (salaire<78570){return(1837.11 + (salaire - 27478) * 0.3)}
+  if (salaire<168994){return(17164.71 + (salaire - 78570) * 0.41)}
+return(54238.55 + (salaire - 168994) * 0.45)}
 
 justePrix<-function(){
   user_choice = 0
