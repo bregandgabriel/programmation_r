@@ -11,23 +11,23 @@ brutToNet2<- function(brut,statu){
     if (statu == "cadre") { 
       return(brut-brut*(0.25+0.075))
     } else { 
-        if (statu == "non-cadre"){ 
-          return(brut-brut*(0.22+0.075))
-          } 
+      if (statu == "non-cadre"){ 
+        return(brut-brut*(0.22+0.075))
+      } 
       else {
         return("ERROR : contract unknown")
       }
     }
   } 
   else 
-    {
-      return("ERROR : type not expected")
-    }
+  {
+    return("ERROR : type not expected")
+  }
 }
 
 
 
-brutToNet3<- function(brut,statu,temp,taux){
+brutToNet3<- function(brut,statu,temp=100,taux=7.5){
   if (is.numeric(brut) & is.numeric(taux) & is.numeric(temp)){
     if (temp>=0 & temp<=100 ){
       if(taux>=0&taux<=100){
@@ -73,22 +73,22 @@ justePrix<-function(){
   user_choice_dif<- readline(prompt = "facile ou difficile ")
   life = 10
   while(user_choice!=ai_choice){user_choice<- readline(prompt = "Saisissez une valeur textuelle : ")
-    if (user_choice>ai_choice){
-      print("plus petit")
-      }
-    else{
-      if(user_choice!=ai_choice){print("plus grand")}else{print("gg")}
-      }
-    if (user_choice_dif=="difficile"){
-      life = life-1
-      print("vie")
-      print(life)
-      if(life==0){
-        print(ai_choice)
-        return("perdue"  )
-        }
-      }
+  if (user_choice>ai_choice){
+    print("plus petit")
+  }
+  else{
+    if(user_choice!=ai_choice){print("plus grand")}else{print("gg")}
+  }
+  if (user_choice_dif=="difficile"){
+    life = life-1
+    print("vie")
+    print(life)
+    if(life==0){
+      print(ai_choice)
+      return("perdue"  )
     }
+  }
+  }
 }
 
 pierreFeuilleCiseaux<-function(){
