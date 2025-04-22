@@ -1,3 +1,3 @@
-# cours_base_programmation_r
+# cours_base_programmation_Rshyni
  
-Apprentissage des base de r et de Rshyni 
+Apprentissage des base de Rshyni 
