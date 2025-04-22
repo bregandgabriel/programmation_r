@@ -1,3 +1,3 @@
-# programmation_r
+# cours_base_programmation_r
  
-MODIF
+Apprentissage des base de r et de Rshyni 
